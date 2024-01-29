@@ -1,0 +1,232 @@
+.completed {
+  text-decoration: line-through;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 49vw;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  .input-todo {
+    width: 35vw;
+    height: 30px;
+    margin: 10px 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: 10px 0;
+      padding: 10px;
+      button {
+        margin-left: 10px;
+      }
+      .todo-name {
+        display: flex;
+        gap: 10px;
+      }
+      &:hover {
+        background-color: #e5e4e4;
+        border-radius: 5px;
+      }
+    }
+  }
+  .add-button {
+    width: 100px;
+    height: 36px;
+    margin: 10px 0;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #006a8b;
+    }
+  }
+  .input-list {
+    display: flex;
+    gap: 10px;
+    input {
+      &:hover {
+        box-shadow: 10 0 30 0 black;
+      }
+    }
+  }
+}
+.modal-edit {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-edit form {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  .update-button {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    .yes-button {
+      width: 100px;
+      height: 36px;
+      margin: 10px 0;
+      background-color: #008cba;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #006a8b;
+      }
+    }
+    .cancel-button {
+      width: 100px;
+      height: 36px;
+      margin: 10px 0;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: wheat;
+      }
+    }
+  }
+  .job-name-change {
+    display: flex;
+    flex-direction: column;
+    input {
+      margin-top: 10px;
+      width: 99%;
+      height: 30px;
+      margin: 10px 0;
+    }
+  }
+}
+.modal-delete {
+  .confirm-button,
+  .cancel-button {
+    width: 100px;
+    height: 36px;
+    margin: 10px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: wheat;
+    }
+  }
+
+  .confirm-button {
+    background-color: #006a8b;
+
+    &:hover {
+      background-color: #004c63;
+    }
+  }
+}
+.modal-delete {
+  background: white;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  width: 26%;
+  height: 35%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+  padding-bottom: 27px;
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    span {
+      font-weight: 700;
+    }
+  }
+  .button-group {
+    display: flex;
+    gap: 10px;
+    .yes-button {
+      width: 100px;
+      height: 36px;
+      margin: 10px 0;
+      background-color: #008cba;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #006a8b;
+      }
+      .cancel-button {
+        width: 100px;
+        height: 36px;
+        margin: 10px 0;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: wheat;
+        }
+      }
+    }
+  }
+}
+.overlay {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.alert-todo {
+  width: 90%;
+  background-color: #80808052;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px;
+  }
+}
